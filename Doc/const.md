@@ -32,3 +32,14 @@ int * const p; // p const point to int
 const int * const p; // p const point to int const 
 int const * const p; // p const point ro const int
 ```
+
+
+## const 限定符与 constexpr
+
+const 限定符修饰的，有的在运行时才能确定，有的可以再编译时确定， 例如
+
+const int size = getSize();// 运行时确定
+const int a = 100; // 编译时确定
+
+constexpr 修饰的变量一定是常量表达式, 常量表达式在编译时就确定
+constexpr int mf = 20; 
