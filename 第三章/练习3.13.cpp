@@ -4,9 +4,6 @@
 
 using namespace std;
 
-void printVector()
-
 int main(int argc, char **argv)
 {
-    
 }
