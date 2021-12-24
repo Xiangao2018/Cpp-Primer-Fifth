@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 
     if( ivec1 != ivec2 )
     {
-        cout << " 不相等" << endl;
+        cout << "不相等" << endl;
     }
     else
     {
