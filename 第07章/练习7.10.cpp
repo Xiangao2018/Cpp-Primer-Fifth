@@ -1,0 +1,1 @@
+从 cin 中读取 data1 以及 data2 值
