@@ -4,16 +4,23 @@
 using namespace std;
 
 struct Sales_data {
-    std::string bookNo;
+    string bookNo;
     unsigned units_sold = 0;
-    double revenue      = 0.0f;
+    double revenue = 0.0f;
 
-    std::string isbn() const { return bookNo; }
-    void combine(const Sales_data &data) {
-        units_sold += data.units_sold;
-        revenue += data.revenue;
-    }
+    string isbn() const;
+    Sales_data &combine(const Sales_data &data);
 };
+
+std::string Sales_data::isbn() const { 
+    return this->bookNo;
+}
+
+Sales_data &Sales_data::combine(const Sales_data &data) {
+    this->units_sold += data.units_sold;
+    this->revenue += data.revenue;
+    return *this;
+}
 
 std::istream &read(std::istream &in, Sales_data &data)
 {
