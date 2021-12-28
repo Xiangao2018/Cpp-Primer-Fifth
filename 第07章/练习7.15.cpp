@@ -9,7 +9,7 @@ struct Person {
 
     Person(string name, string address): name(name), address(address) {}
 
-    string getNane() const; { return name; }// 常量成员函数
+    string getNane() const { return name; }// 常量成员函数
     string getName1() { return name; };
     string getAddress() const {  return address; };
 };
