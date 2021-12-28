@@ -3,10 +3,10 @@
 
 using namespace std;
 
-class Perosn {
+class Person {
 public:
     Person() = default;
-    Perosn(string name, string address): name(name), address(address) {}
+    Person(string name, string address): name(name), address(address) {}
 
     string getName() const { return name; }
     string getAddress() const { return address; }
