@@ -17,7 +17,7 @@ std::ostream &print(std::ostream &out, const PersonInfo &info)
 	out << "name is: "  << info.name;
 	out << ", phones are: ";
 
-	for( string phone : info.phones )
+	for( const auto &phone : info.phones )
 	{
 		out << phone << " ";
 	}
@@ -49,7 +49,7 @@ void test()
 	}
 
 
-	for( PersonInfo info : people )
+	for( const auto &info : people )
 	{
 		print(cout, info);
 	}
@@ -84,7 +84,7 @@ void test2()
 
 	}
 
-	for( PersonInfo info : people )
+	for( const auto &info : people )
 	{
 		print(cout, info);
 	}
