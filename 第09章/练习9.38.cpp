@@ -13,6 +13,14 @@ int main(int argc, char **argv)
 
 	cout <<"v[0] = " << &v[0] << ", count = " << v.size() << ", capacity = " << v.capacity() << endl;
 
+	v.resize(20, 0);
+	cout <<"v[0] = " << &v[0] << ", count = " << v.size() << ", capacity = " << v.capacity() << endl;
+
+	v.resize(5, 0);
+	cout <<"v[0] = " << &v[0] << ", count = " << v.size() << ", capacity = " << v.capacity() << endl;
+
+	v.reserve(50);
+	cout <<"v[0] = " << &v[0] << ", count = " << v.size() << ", capacity = " << v.capacity() << endl;
 
 	return 0;
-}
+} 
