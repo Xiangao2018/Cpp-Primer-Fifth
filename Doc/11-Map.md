@@ -17,3 +17,6 @@ while( cin >> word )
 ```
 
 
+## set
+
+set 没有 push_back 以及 push_Front，可以用 insert
