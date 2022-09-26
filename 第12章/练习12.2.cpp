@@ -15,6 +15,12 @@ public:
 
 	void push_back(const std::string &t) { data->push_back( t ); };
 
+	std::string &front() {  return data->front(); }
+	std::string &back() { return data->back(); }
+
+	const std::string &front() const { return const_cast<std::string &>( data->front() ); }
+	const std::string &back() const { return const_cast<std::string &>( data->back() ); }
+
 	int count() const { return data->size(); }
  
 private:
@@ -23,16 +29,14 @@ private:
 
 int main(int argc, char* argv[])
 {
-	StrBlob b1;
-	{
-		StrBlob b2 = {"a", "an", "the"};
-		b1 = b2;
-		b2.push_back("about");
+	StrBlob b1 = {"a"};
+	
+	std::string &front = b1.front();
+	front = "bbbb";
 
-		cout << b2.count() << endl; // 4
-	}
+	cout << b1.front() << endl; // bbbb
 
-	cout << b1.count() << endl; // 4
+	const std::string &back = b1.back();
 
 	return 0;
 }
